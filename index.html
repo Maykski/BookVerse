@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/reset.css">
     <title>BookVerse</title>
 </head>
@@ -41,8 +42,61 @@
     </section>
     <section class="carrossel">
         <h2 class="carrossel__titulo">Novos lançamentos</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="assets/livro1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/livro2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/livro3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/livro4.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/livro5.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/livro6.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/livro7.jpg" alt=""></div>
+                ...
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="card">
+            <div class="car_descricao">
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Talvez você se interressa por </h3>
+                    <p class="descricao__livro-titulo">Angular 11 e firebase</p>
+                    <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                </div>
+                <img src="assets/Angulae.svg" alt="" class="descricao__imagem">
+            </div>
+
+            <div class="card_botoes">
+                <ul class="butoes">
+                    <li class="butoes__item"><img href="assets/Favoritos.svg" class="butoes__link"></li>
+                    <li class="butoes__item"><img href="assets/Compras.svg" class="butoes__link"></li>
+                </ul>                
+
+                <a href="#" class="botoes_ancora">Saíba mais</a>
+            </div>
+        </div>
     </section>
     <main></main>
     <footer></footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {                
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: "bullets",
+            },
+        }); 
+    </script>
 </body>
 </html>
